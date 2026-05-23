@@ -8,9 +8,6 @@
     "lint": "eslint . --fix",
     "format": "prettier --write ."
   },
-  "workspaces": [
-    "apps/*"
-  ],
   "keywords": [],
   "author": "",
   "license": "ISC",
