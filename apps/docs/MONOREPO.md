@@ -61,17 +61,17 @@ Se o linting falhar, corrija os erros apontados pelo terminal e tente commitar n
 
 ## 💡 Comandos Úteis
 
-| Ação                        | Comando                                                                               |
-| --------------------------- | ------------------------------------------------------------------------------------- |
-| Instalar o fnm              | Instale a versão para o seu SO na documentação oficial: https://github.com/Schniz/fnm |
-| Instale o Node.js via fnm   | `fnm install 25`                                                                      |
-| Use a versão instalada      | `fnm use 25`                                                                          |
-| Instalar o pnpm globalmente | `npm install -g pnpm`                                                                 |
-| Instalar dependências       | `pnpm install`                                                                        |
+| Ação                       | Comando                                                                               |
+| -------------------------- | ------------------------------------------------------------------------------------- |
+| Instalar o fnm             | Instale a versão para o seu SO na documentação oficial: https://github.com/Schniz/fnm |
+| Instale o Node.js via fnm  | `fnm install 25`                                                                      |
+| Use a versão instalada     | `fnm use 25`                                                                          |
+| Instale o pnpm globalmente | `npm install -g pnpm`                                                                 |
+| Instale as dependências    | `pnpm install`                                                                        |
 
 ## Colaboração
 
 - **Todos** Não é obrigatório ficar apenas em um scopo se puder ajudar em backend sendo frontend fique a vontade :)
-- **Time Backend:** Mantenham seus arquivos dentro de `apps/backend` e usem `black/flake8`.
+- **Time Backend:** Mantenham seus arquivos dentro de `apps/backend` e usem `ruff`.
 - **Time Frontend:** Mantenham seus arquivos dentro de `apps/frontend` e usem `eslint/prettier`.
 - **Dúvidas?** Consulte o `README.md` específico de cada pasta ou verifique a documentação da API em `/docs`.
