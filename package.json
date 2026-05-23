@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "preinstall": "node -e \"if (process.version.split('.')[0].replace('v', '') < 25) { console.error('ERRO: Você está usando Node ' + process.version + '. Este projeto exige Node 25+.'); process.exit(1); }\"",
     "prepare": "husky",
     "lint": "eslint . --fix",
     "format": "prettier --write ."
@@ -11,16 +12,10 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "devEngines": {
-    "packageManager": {
-      "name": "pnpm",
-      "version": "^11.2.2",
-      "onFail": "download"
-    }
-  },
   "engines": {
     "node": ">=25.x"
   },
+  "packageManager": "pnpm@11.2.2",
   "type": "module",
   "devDependencies": {
     "@commitlint/cli": "^21.0.1",
