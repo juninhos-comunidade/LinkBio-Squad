@@ -1,0 +1,5 @@
+{
+  "*.{js,jsx,ts,tsx}": ["eslint --fix", "prettier --write"],
+  "*.py": ["black --check", "flake8"],
+  "*.{json,md,html,css}": ["prettier --write"]
+}
