@@ -4,22 +4,25 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "prepare": "husky"
+    "prepare": "husky",
+    "lint": "eslint . --fix",
+    "format": "prettier --write ."
   },
+  "workspaces": [
+    "apps/*"
+  ],
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devEngines": {
-    "runtime": {
-      "name": "node",
-      "version": "25.x",
-      "onFail": "error"
-    },
     "packageManager": {
       "name": "pnpm",
       "version": "^11.2.2",
       "onFail": "download"
     }
+  },
+  "engines": {
+    "node": ">=25.x"
   },
   "type": "module",
   "devDependencies": {
