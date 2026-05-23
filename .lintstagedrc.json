@@ -1,5 +1,5 @@
 {
   "*.{js,jsx,ts,tsx}": ["eslint --fix", "prettier --write"],
-  "*.py": ["black --check", "flake8"],
+  "*.py": ["ruff check --fix", "ruff format"],
   "*.{json,md,html,css}": ["prettier --write"]
 }

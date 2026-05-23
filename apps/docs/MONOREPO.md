@@ -20,7 +20,7 @@ Bem-vindo ao nosso projeto! Este repositório utiliza uma estrutura de **Monorep
 Para manter a consistência do código, utilizamos ferramentas padronizadas na raiz:
 
 - **Gerenciador de Pacotes:** `pnpm` (recomendado pela performance em monorepos).
-- **Qualidade de Código:** `ESLint` + `Prettier` (para o frontend) e `Black` + `Flake8` (para o backend).
+- **Qualidade de Código:** `ESLint` + `Prettier` (para o frontend) e `ruff` (para o backend).
 - **Git Hooks:** `Husky` para garantir que ninguém suba código sem passar pelo linting.
 - **Padronização de Commits:** `Commitlint` (seguindo _Conventional Commits_).
 
@@ -55,7 +55,7 @@ O `husky` validará automaticamente sua mensagem antes do commit. Se o formato e
 O `lint-staged` roda automaticamente antes de cada commit.
 
 - Arquivos `.js, .jsx, .ts, .tsx`: Passam pelo `eslint` e `prettier`.
-- Arquivos `.py`: Passam pelo `black` e `flake8`.
+- Arquivos `.py`: Passam pelo `ruff`.
 
 Se o linting falhar, corrija os erros apontados pelo terminal e tente commitar novamente.
 
