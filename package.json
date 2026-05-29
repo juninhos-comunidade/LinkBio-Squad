@@ -1,0 +1,34 @@
+{
+  "name": "link-bio-squad",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "preinstall": "node -e \"if (process.version.split('.')[0].replace('v', '') < 25) { console.error('ERRO: Você está usando Node ' + process.version + '. Este projeto exige Node 25+.'); process.exit(1); }\"",
+    "prepare": "husky",
+    "lint": "eslint . --fix",
+    "format": "prettier --write ."
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "engines": {
+    "node": ">=25.x"
+  },
+  "packageManager": "pnpm@11.2.2",
+  "type": "module",
+  "devDependencies": {
+    "@commitlint/cli": "^21.0.1",
+    "@commitlint/config-conventional": "^21.0.1",
+    "@eslint/js": "^10.0.1",
+    "eslint": "^10.4.0",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-react": "^7.37.5",
+    "eslint-plugin-simple-import-sort": "^13.0.0",
+    "globals": "^17.6.0",
+    "husky": "^9.1.7",
+    "lint-staged": "^17.0.5",
+    "prettier": "^3.8.3",
+    "typescript-eslint": "^8.59.4"
+  }
+}

@@ -1,0 +1,10 @@
+if ! pnpm exec commitlint --edit "${1}"; then
+  echo "----------------------------------------------------"
+  echo "❌ Formato de commit inválido!"
+  echo "Use o padrão: tipo(escopo): descrição"
+  echo "Exemplos:"
+  echo "  feat(frontend): adiciona botão de login"
+  echo "  fix(backend): corrige bug de autenticação"
+  echo "----------------------------------------------------"
+  exit 1
+fi
