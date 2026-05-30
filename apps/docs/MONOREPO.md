@@ -1,4 +1,4 @@
-# 📂 Documentação do Monorepo: Conecta +
+# 📂 Documentação do Monorepo: LinkBio-Squad
 
 Bem-vindo ao nosso projeto! Este repositório utiliza uma estrutura de **Monorepo** para manter nossas aplicações Frontend (React) e Backend (Python) unificadas, garantindo qualidade, padronização e um fluxo de trabalho eficiente.
 
@@ -61,13 +61,13 @@ Se o linting falhar, corrija os erros apontados pelo terminal e tente commitar n
 
 ## 💡 Comandos Úteis
 
-| Ação                       | Comando                                                                               |
-| -------------------------- | ------------------------------------------------------------------------------------- |
-| Instalar o fnm             | Instale a versão para o seu SO na documentação oficial: https://github.com/Schniz/fnm |
-| Instale o Node.js via fnm  | `fnm install 25`                                                                      |
-| Use a versão instalada     | `fnm use 25`                                                                          |
-| Instale o pnpm globalmente | `npm install -g pnpm`                                                                 |
-| Instale as dependências    | `pnpm install`                                                                        |
+| Ação                      | Comando                                                                               |
+| ------------------------- | ------------------------------------------------------------------------------------- |
+| **Instalar o fnm**        | Instale a versão para o seu SO na documentação oficial: https://github.com/Schniz/fnm |
+| **Instalar Node.js**      | `fnm install` (usa a versão definida no `.node-version`)                              |
+| **Ativar Node.js**        | `fnm use`                                                                             |
+| **Ativar Corepack**       | `corepack enable`                                                                     |
+| **Instalar dependências** | `pnpm install`                                                                        |
 
 ## Colaboração
 
