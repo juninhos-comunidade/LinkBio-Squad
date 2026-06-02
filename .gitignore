@@ -23,7 +23,7 @@ env/
 .eslintcache
 .prettiercache
 .husky/_/
-
+.env
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
