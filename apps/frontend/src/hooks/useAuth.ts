@@ -1,6 +1,5 @@
+import { useAuthContext } from "../context/AuthContext";
+
 export function useAuth() {
-  return {
-    isAuthenticated: false,
-    user: null,
-  };
+  return useAuthContext();
 }
