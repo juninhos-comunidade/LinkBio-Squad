@@ -1,0 +1,21 @@
+{
+  "name": "@link-bio-squad/backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "tsx --watch --env-file=.env src/index.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@types/node": "^26.0.1",
+    "tsx": "^4.22.4",
+    "typescript": "~5.8.3"
+  },
+  "dependencies": {
+    "fastify": "^5.8.5"
+  }
+}
