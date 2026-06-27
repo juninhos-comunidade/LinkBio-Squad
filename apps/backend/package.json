@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "tsx --watch --env-file=.env src/index.ts"
+    "dev": "tsx --watch --env-file=.env src/main/server.ts"
   },
   "keywords": [],
   "author": "",
@@ -16,6 +16,9 @@
     "typescript": "~5.8.3"
   },
   "dependencies": {
-    "fastify": "^5.8.5"
+    "@fastify/swagger": "^9.7.0",
+    "@scalar/fastify-api-reference": "^1.62.0",
+    "fastify": "^5.8.5",
+    "fastify-type-provider-zod": "^7.0.0"
   }
 }
