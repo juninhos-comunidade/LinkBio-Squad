@@ -21,10 +21,10 @@ Este projeto está sendo construído de forma 100% colaborativa dentro do ecossi
 
 O projeto foi estruturado seguindo os conceitos de **modularização**, alta coesão e baixo acoplamento:
 
-* **Frontend:** ...
-* **Backend:** ...
-* **Banco de Dados:** ...
-* **Infraestrutura:** ...
+- **Frontend:** ...
+- **Backend:** ...
+- **Banco de Dados:** ...
+- **Infraestrutura:** ...
 
 ---
 
@@ -45,29 +45,33 @@ Aqui está o mapeamento de recursos que estão sendo construídos ou planejados 
 ### 📋 Pré-requisitos
 
 Antes de começar, você vai precisar ter instalado em sua máquina:
-* **Ambiente de Execução / Linguagem:** ...
-* **Controle de Versão:** ...
-* **Gerenciador de Pacotes:** ...
+
+- **Ambiente de Execução / Linguagem:** ...
+- **Controle de Versão:** ...
+- **Gerenciador de Pacotes:** ...
 
 ### 🚀 Passos para Instalação
 
 1. Clone o repositório oficial dentro da organização Juninhos:
+
    ```bash
    git clone [https://github.com/juninhos-comunidade/link-bio-squad.git](https://github.com/juninhos-comunidade/link-bio-squad.git)
    ```
 
 2. Acesse a pasta do projeto:
+
    ```bash
    cd link-bio-squad
    ```
 
 3. Instale todas as dependências necessárias:
+
    ```bash
    ...
    ```
 
 4. Configure as variáveis de ambiente:
-   * Crie um arquivo `.env` na raiz do projeto seguindo o modelo do `.env.example`.
+   - Crie um arquivo `.env` na raiz do projeto seguindo o modelo do `.env.example`.
 
 5. Inicie o servidor de desenvolvimento:
    ```bash
@@ -81,24 +85,29 @@ Antes de começar, você vai precisar ter instalado em sua máquina:
 Para manter o código limpo e organizado para todo o time, seguimos rigorosamente estas regras de contribuição:
 
 ### 1. Nomenclatura de Branches
+
 Sempre crie uma ramificação específica para a sua tarefa a partir da branch principal:
-* `feature/nome-da-funcionalidade`
-* `fix/correcao-de-bug`
-* `docs/atualizacao-readme`
+
+- `feature/nome-da-funcionalidade`
+- `fix/correcao-de-bug`
+- `docs/atualizacao-readme`
 
 ```bash
 git checkout -b feature/minha-tarefa
 ```
 
 ### 2. Padrão de Commits
+
 Os commits devem ser claros, em português e indicar a intenção da alteração:
-* `feat: adiciona componente de card de link social`
-* `fix: corrige alinhamento de icones no painel de edicao`
-* `style: atualiza paleta de cores dos botoes de acao`
+
+- `feat: adiciona componente de card de link social`
+- `fix: corrige alinhamento de icones no painel de edicao`
+- `style: atualiza paleta de cores dos botoes de acao`
 
 ### 3. Revisão de Código (Pull Requests)
-* Nunca faça o merge direto na branch principal.
-* Abra um **Pull Request (PR)** e solicite a revisão de pelo menos um outro membro do squad antes de aplicar as alterações.
+
+- Nunca faça o merge direto na branch principal.
+- Abra um **Pull Request (PR)** e solicite a revisão de pelo menos um outro membro do squad antes de aplicar as alterações.
 
 ---
 
@@ -106,13 +115,14 @@ Os commits devem ser claros, em português e indicar a intenção da alteração
 
 Um projeto completo só ganha vida com uma equipe sintonizada. Conheça as mentes por trás do desenvolvimento da plataforma:
 
-| Avatar | Membro | Função / Especialidade | GitHub |
-| :---: | :--- | :--- | :--- |
-| <img src="https://github.com/github.png" width="40" style="border-radius:50%"/> | **Kauam** | Pendente | ... |
-| <img src="https://github.com/github.png" width="40" style="border-radius:50%"/> | **Gabriela Oliveira** | Pendente | ... |
-| <img src="https://github.com/github.png" width="40" style="border-radius:50%"/> | **Erik Miqueias Pereira Costa** | Pendente | ... |
-| <img src="https://github.com/github.png" width="40" style="border-radius:50%"/> | **Igor** | Pendente | ... |
-| <img src="https://github.com/github.png" width="40" style="border-radius:50%"/> | **Renan Dantas Felício** | Pendente | ... |
+|                                     Avatar                                      | Membro                          | Função / Especialidade | GitHub       |
+| :-----------------------------------------------------------------------------: | :------------------------------ | :--------------------- | :----------- |
+| <img src="https://github.com/github.png" width="40" style="border-radius:50%"/> | **Kauam**                       | Pendente               | ...          |
+| <img src="https://github.com/github.png" width="40" style="border-radius:50%"/> | **Gabriela Oliveira**           | Pendente               | ...          |
+| <img src="https://github.com/github.png" width="40" style="border-radius:50%"/> | **Erik Miqueias Pereira Costa** | Pendente               | ...          |
+| <img src="https://github.com/github.png" width="40" style="border-radius:50%"/> | **Igor**                        | Pendente               | ...          |
+| <img src="https://github.com/github.png" width="40" style="border-radius:50%"/> | **Renan Dantas Felício**        | Pendente               | ...          |
+| <img src="https://github.com/github.png" width="40" style="border-radius:50%"/> | **Kaleb Tavares**               | Dev Backend            | kalebtavares |
 
 ---
 
@@ -126,4 +136,7 @@ Este projeto é de uso exclusivo e educacional dos membros vinculados à **Junin
 
 Este projeto é desenvolvido e mantido pelos membros da **Juninhos Community**.
 Se precisar de suporte técnico, mentoria de deploy ou dúvidas sobre infraestrutura, use os canais oficiais no Discord.
+
+```
+
 ```
