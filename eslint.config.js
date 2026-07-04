@@ -28,7 +28,7 @@ export default [
     },
   },
   {
-    ignores: ["apps/backend/**", "**/node_modules/**"],
+    ignores: ["**/node_modules/**"],
   },
   eslintConfigPrettier,
 ];
