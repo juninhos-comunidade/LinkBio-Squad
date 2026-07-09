@@ -2,6 +2,7 @@
   "name": "link-bio-squad",
   "version": "1.0.0",
   "main": "index.js",
+  "types": "module",
   "scripts": {
     "prepare": "husky",
     "preinstall": "npx check-node-version --node \"25.x\" --print",
