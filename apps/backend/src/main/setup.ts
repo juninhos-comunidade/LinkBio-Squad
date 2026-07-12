@@ -1,4 +1,8 @@
 import fastifySwagger from "@fastify/swagger";
+import {
+  serializerCompiler,
+  validatorCompiler,
+} from "@fastify/type-provider-zod";
 import fastifyApiReference from "@scalar/fastify-api-reference";
 import fastify, { FastifyInstance } from "fastify";
 
@@ -6,6 +10,9 @@ export const buildApp = async (): Promise<FastifyInstance> => {
   const app = fastify({
     logger: true,
   });
+
+  app.setValidatorCompiler(validatorCompiler);
+  app.setSerializerCompiler(serializerCompiler);
 
   await app.register(fastifySwagger, {
     openapi: {
