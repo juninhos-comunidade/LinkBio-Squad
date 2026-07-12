@@ -1,10 +1,14 @@
 import fastifySwagger from "@fastify/swagger";
 import {
+  jsonSchemaTransform,
   serializerCompiler,
   validatorCompiler,
 } from "@fastify/type-provider-zod";
 import fastifyApiReference from "@scalar/fastify-api-reference";
 import fastify, { FastifyInstance } from "fastify";
+
+import { errorHandler } from "../infra/http/middlewares/error-handler";
+import { userRoutes } from "../infra/http/routes/user";
 
 export const buildApp = async (): Promise<FastifyInstance> => {
   const app = fastify({
@@ -13,6 +17,8 @@ export const buildApp = async (): Promise<FastifyInstance> => {
 
   app.setValidatorCompiler(validatorCompiler);
   app.setSerializerCompiler(serializerCompiler);
+
+  app.setErrorHandler(errorHandler);
 
   await app.register(fastifySwagger, {
     openapi: {
@@ -30,8 +36,8 @@ export const buildApp = async (): Promise<FastifyInstance> => {
       ],
       tags: [
         {
-          name: "LinkBio Squad",
-          description: "Endpoints relacionados ao linkbio",
+          name: "User",
+          description: "Endpoints relacionados ao usuário",
         },
       ],
       components: {
@@ -44,11 +50,13 @@ export const buildApp = async (): Promise<FastifyInstance> => {
         },
       },
     },
+    transform: jsonSchemaTransform,
   });
 
   await app.register(fastifyApiReference, {
     routePrefix: "/docs",
   });
 
+  app.register(userRoutes, { prefix: "/api/v1" });
   return app;
 };
