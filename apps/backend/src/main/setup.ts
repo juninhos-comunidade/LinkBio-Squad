@@ -1,3 +1,5 @@
+import fastifyCookie from "@fastify/cookie";
+import fastifyJwt from "@fastify/jwt";
 import fastifySwagger from "@fastify/swagger";
 import {
   jsonSchemaTransform,
@@ -55,6 +57,15 @@ export const buildApp = async (): Promise<FastifyInstance> => {
 
   await app.register(fastifyApiReference, {
     routePrefix: "/docs",
+  });
+
+  app.register(fastifyJwt, {
+    secret: process.env.JWT_SECRET!,
+    prefix: "/api/v1",
+  });
+
+  app.register(fastifyCookie, {
+    secret: process.env.COOKIE_SECRET!,
   });
 
   app.register(userRoutes, { prefix: "/api/v1" });

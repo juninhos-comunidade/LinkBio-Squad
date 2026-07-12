@@ -12,14 +12,8 @@ export function errorHandler(
     return reply.status(400).send({
       message: "Erro de validação nos dados enviados.",
       details: error.validation.map((err) => {
-        const issue = err.params?.issue;
         const customMessage =
-          typeof issue === "object" &&
-          issue !== null &&
-          "message" in issue &&
-          typeof issue.message === "string"
-            ? (issue as { message: string }).message
-            : err.message;
+          (err.params.issue as Record<string, unknown>)?.message || err.message;
 
         return {
           field: err.instancePath.replace(/^\/body\//, "").replace(/\//g, "."),

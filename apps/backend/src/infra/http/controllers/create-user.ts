@@ -12,6 +12,7 @@ export class CreateUserController {
     reply: FastifyReply,
   ) {
     const body = req.body;
+    console.log(body.password);
 
     if (!createUserRequestSchema.safeParse(body)) {
       return reply.status(400).send({
@@ -21,17 +22,39 @@ export class CreateUserController {
     }
 
     const createUserUseCase = makeCreateUser();
+
     const user = await createUserUseCase.execute(body);
-    return reply.status(200).send({
-      id: user.id,
-      name: user.name,
-      email: user.email,
-      avatar: user.avatar,
-      role: user.role,
-      location: user.location,
-      bio: user.bio,
-      stack: user.stack,
-      customLinks: user.customLinks,
+
+    const accessToken = await reply.jwtSign({
+      sign: { sub: user.id, expiresIn: "15m" },
     });
+
+    const refreshToken = await reply.jwtSign({
+      sign: { sub: user.id, expiresIn: "7d" },
+    });
+
+    return reply
+      .setCookie("refreshToken", refreshToken, {
+        path: "/",
+        secure: true,
+        httpOnly: true,
+        sameSite: "strict",
+      })
+      .status(201)
+      .send({
+        id: user.id,
+        name: user.name,
+        email: user.email,
+        avatar: user.avatar,
+        role: user.role,
+        location: user.location,
+        bio: user.bio,
+        stack: user.stack,
+        customLinks: user.customLinks,
+        createdAt: user.createdAt,
+        tokens: {
+          accessToken,
+        },
+      });
   }
 }

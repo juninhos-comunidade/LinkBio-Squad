@@ -11,7 +11,7 @@ export const createUserRequestSchema = z.object({
   }),
   password: z
     .string({
-      error: "O campo 'passwor' deve conter no mínimo 8 caracteres.",
+      error: "O campo 'password' deve conter no mínimo 8 caracteres.",
     })
     .min(8),
   avatar: z.string().optional(),
@@ -46,6 +46,9 @@ export const createUserRequestSchema = z.object({
 
 export const createUserResponseSchema = z
   .clone(createUserRequestSchema)
+  .omit({
+    password: true,
+  })
   .extend({
     id: z.uuid(),
     tokens: z.object({
