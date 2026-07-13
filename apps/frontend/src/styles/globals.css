@@ -1,3 +1,5 @@
+@import "./components.css";
+
 /*ESTILOS GLOBAIS */
 @layer base {
   * {
