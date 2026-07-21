@@ -10,5 +10,5 @@
     "outDir": "dist",
     "rootDir": "."
   },
-  "include": ["src", "drizzle.config.ts"]
+  "include": ["src", "prisma.config.ts"]
 }
